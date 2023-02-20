@@ -1,0 +1,99 @@
+/*command*/
+body {font-family: 'Fredoka One', cursive; font-size: 16; font-weight:400px; line-height: 1.4; color: #333; list-style:none; margin: 0; padding: 0; height: 100%;}
+a {text-decoration: none}
+.inner {width: 1100px; margin: 0 auto; position: relative}
+
+
+
+
+/*header*/
+header {background-color: #F6F5F0}
+header > .inner {height: 120px}
+.logo1 img {height: 85px; width: 85px; top: 15px; position:absolute}
+.sub-menu {position: absolute; top: 10px; right: 0; display: flex}
+.menu {display: flex}
+.menu li::before {content: ""; width: 1px; height: 12px; background-color: white; position: absolute; top: 0; bottom: 0; margin: auto}
+.menu li:first-child::before {display:none}
+.menu a {padding: 10px 10px; display: block; font-size: 13px; color:black}
+.menu a:hover {color:pink}
+.search input {width: 36px; height: 34px; padding: 4px 10px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 5px; outline: none; background-color: white; color: #777; font-size: 12px; transition: width .4s;}
+.search input:focus{width: 190px; border-color: pink}
+.search .material-icons{height: 24px; position: absolute; top: 5px; bottom: 0; right: 6px; transition: .4s}
+.sub-menu .search{position: relative; height: 34px}
+.search.focused .material-icons {opacity: 0;}
+.main-menu {position: absolute; bottom: 0; right: 0; z-index: 1; display: flex; font-family: 'Poor Story', cursive;}
+.main-menu .item .item_name {padding: 10px 20px 34px 20px; font-size: 17px;}
+.main-menu .item:hover .item_name {background-color: pink; color: white; border-radius: 6px 6px 0 0}
+.main-menu .item .item_contents {background-color:pink; width: 100%; position: fixed; left: 0; display: none}
+.main-menu .item:hover .item_contents {display: block}
+.main-menu .item .item_contents .contents_menu {background-color: pink}
+.main-menu .item .item_contents .contents_menu > ul {padding: 20px 0; display: flex}
+.main-menu .item .item_contents .contents_menu > ul > li {width: 220px}
+.main-menu .item .item_contents .contents_menu > ul > li h4 {padding: 3px 0 12px 0; font-size: 18px; font-weight: bolder; color:white}
+.main-menu .item .item_contents .contents_menu > ul > li ul li {padding: 5px 0; font-size: 15px; color: #999; cursor:pointer}
+.main-menu .item .item_contents .contents_menu > ul > li ul li:hover {color: hotpink}
+.main-menu .item .item_contents .contents_texture {padding: 26px 0; font-size: 15px;}
+.main-menu .item .item_contents .contents_texture h4 {color: white; font-size: 18px; font-weight: bolder;}
+.main-menu .item .item_contents .contents_texture p {color:hotpink; margin: 4px 0 14px; padding: 8px 0;}
+
+/*visual*/
+.visual {background-image: url(image/visual_bg.jpg); background-position: center}
+.visual .inner {height: 591px}
+.visual .title > h3 {font-family: 'Amatic SC', cursive; font-size: 200px; position:relative; left: 50px; color: white; margin-left: 140px; top: 80px}
+.visual .title > h4 {font-family: 'Amatic SC', cursive; font-size: 70px; position:relative; left: 50px; color:hotpink; font-weight: bold; margin-left:330px; top: 80px}
+.visual .ani1.image {position:absolute; width: 90px; height: 90px; left: 370px; bottom: -230px;}
+.visual .ani2.image {position:absolute; width: 70px; height: 70px; left: 497px; bottom: -218px;}
+.visual .ani3.image {position:absolute; width: 70px; height: 70px; left: 620px; bottom: -218px;}
+.visual .ani1.text {font-family: 'Amatic SC', cursive; font-size: 22px; font-weight: bold;position:absolute; left: 402px; bottom: -260px; color: brown}
+.visual .ani2.text{font-family: 'Amatic SC', cursive; font-size: 22px; font-weight: bold;position:absolute; left: 514px; bottom: -260px; color: brown}
+.visual .ani3.text{font-family: 'Amatic SC', cursive; font-size: 22px; font-weight: bold;position:absolute; left: 635px; bottom: -260px; color:brown}
+.visual::before {position: absolute; content: ""; top:120px; left:0px; width: 100%; height: 98%; background-color: rgba(123, 119, 119, 0.4);}
+.fade-in1 { position: relative; animation: fadeInDown 1s;}
+.fade-in2 {position: relative; animation: fadeInDown 6s;}
+.fade-in3 {position: relative; animation: fadeInDown 11s;}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+
+/*notice*/
+.notice {position: relative}
+.notice .bg-left {width: 50%; height: 100%; background-color: pink; position: absolute; top: 0; left: 0;}
+.notice .bg-right {width: 50%; height: 100%; background-color: #F6F5F0; position: absolute; top: 0; right: 0}
+.notice .inner {height: 40px; display: flex;}
+.notice .inner_left {width: 65%; background-color: pink; display: flex; align-items: center}
+.notice .inner_left .swiper {height: 62px; flex-grow: 1;}
+.notice .inner_left .notice-more {width: 62px; height: 62px; display: flex; justify-content: center; align-items: center}
+.notice .inner_left .notice-more .material-icons {position: absolute; width: 20px; height: 20px; filter:invert();}
+.notice .inner_right {width: 35%;}
+.notice .inner_left .swiper .swiper-slide {height: 62px; display: flex; align-items: center; font-family: 'Poor Story', cursive; font-size:18px;}
+.notice .inner_left .swiper .swiper-slide a {color:#fff}
+.notice .inner_right h3{font-size:18px;margin-left: 60px; margin-top: 10px; font-family: 'Fredoka One', cursive; font-family: 'Poor Story', cursive;}
+.notice .inner_right .material-icons {position: absolute; width: 20px; height: 20px; margin-left: 400px; margin-top: -16px}
+
+
+/*promotion*/
+.promotion {background-color: #f6f5ef; display: flex; height: 445px}
+.promotion .swiper img {opacity: 1;}
+.promotion .swiper img:hover {opacity: .7;}
+.promotion .swiper-slide1 {margin-left: 30px; height: 200px;}
+.promotion .swiper-slide2 {margin-left: 10px;margin-right: 10px; height: 200px}
+.promotion .swiper-slide3 {margin-right: 30px; height: 200px}
+.promotion .swiper h4 {text-align: center; font-size: 23px;margin-top: 25px; font-family: 'Poor Story', cursive;}
+.promotion .swiper h6 {text-align: center; font-size: 13px;margin-top: 15px; font-family: 'Poor Story', cursive;}
+.btn {position: relative; height: 35px; background: #eee linear-gradient(to bottom, #fcfcfc, #eee); border: 1px solid #d5d5d5;
+      border-radius: 4px; display: inline-flex; align-items: center; padding: 0 12px; font-size: 14px; font-weight: 500;
+      line-height: 1.5; cursor: pointer; box-sizing: border-box; margin-left: 143px; margin-top: 20px; font-family: 'Poor Story', cursive; color:hotpink }
+.btn:hover::before {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.07);}
+.btn.btn--primary {border: 1px solid #65b836; color: #fff;background: #55a532 linear-gradient(#91dd70, #91dd70);}
+
+
+
